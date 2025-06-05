@@ -546,8 +546,7 @@
   <script src="./assets/js/index.bundle.js"></script>
 
   <!-- MicroModal JS -->
-  <script src="./node_modules/micromodal/dist/micromodal.min.js"></script>
-  <script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/micromodal/0.6.1/micromodal.min.js"></script>
     // Initialiser MicroModal
     MicroModal.init({
       onShow: modal => console.info(`${modal.id} is shown`),
