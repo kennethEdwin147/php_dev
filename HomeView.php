@@ -375,7 +375,7 @@
           <div class="icon-box icon-box-lg bg-opaque-green rounded-circle mb-3 mx-auto">
             <i class="bi bi-box-seam text-green fs-3"></i>
           </div>
-          <h5>Composer/Packagist</h5>
+          <h5>Composer</h5>
         </div>
       </div>
     </div>
