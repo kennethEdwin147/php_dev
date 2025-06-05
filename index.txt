@@ -351,45 +351,49 @@
         <div class="col-lg-8 col-xl-6">
           <h2 class="fw-bold mb-6">Discutons de Votre Projet</h2>
           <p class="text-primary mb-4">Pour me texter: <span class="fw-bold">438-725-1915</span> ou m'écrire: <span class="fw-bold">edwingbeti@gmail.com</span></p>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label for="yourName" class="form-label">Nom, Prénom</label>
-              <input type="text" class="form-control" id="yourName" placeholder="Votre nom et prénom">
+
+          <form method="POST" action="/contact">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Nom, Prénom <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom et prénom" required>
+              </div>
+              <div class="col-md-6">
+                <label for="company" class="form-label">Nom de l'entreprise</label>
+                <input type="text" class="form-control" id="company" name="company" placeholder="Votre entreprise">
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" required>
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Téléphone (optionnel)</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Votre téléphone">
+              </div>
+              <div class="col-md-12">
+                <label for="project_type" class="form-label">Type de besoin <span class="text-danger">*</span></label>
+                <select class="form-select" id="project_type" name="project_type" required>
+                  <option value="">Sélectionnez le type de projet</option>
+                  <option value="development">Développement</option>
+                  <option value="maintenance">Maintenance</option>
+                  <option value="consulting">Conseil</option>
+                  <option value="other">Autre</option>
+                </select>
+              </div>
+              <div class="col-md-12">
+                <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Décrivez votre projet" required></textarea>
+              </div>
+              <div class="col-md-8 mt-4">
+                <button type="submit" class="btn btn-lg btn-green btn-with-icon rounded-pill">Envoyer ma demande <i
+                    class="bi bi-arrow-right"></i></button>
+              </div>
+              <div class="col-md-12 mt-3">
+                <p class="text-muted small">Tel: 438-725-1915 | Email: edwingbeti@gmail.com</p>
+                <p class="text-muted small"><span class="text-danger">*</span> Champs obligatoires</p>
+              </div>
             </div>
-            <div class="col-md-6">
-              <label for="yourCompany" class="form-label">Nom de l'entreprise</label>
-              <input type="text" class="form-control" id="yourCompany" placeholder="Votre entreprise">
-            </div>
-            <div class="col-md-6">
-              <label for="yourEmail" class="form-label">Email</label>
-              <input type="email" class="form-control" id="yourEmail" placeholder="Votre email">
-            </div>
-            <div class="col-md-6">
-              <label for="yourPhone" class="form-label">Téléphone (optionnel)</label>
-              <input type="tel" class="form-control" id="yourPhone" placeholder="Votre téléphone">
-            </div>
-            <div class="col-md-12">
-              <label for="projectType" class="form-label">Type de besoin</label>
-              <select class="form-select" id="projectType">
-                <option selected>Sélectionnez le type de projet</option>
-                <option value="development">Développement</option>
-                <option value="maintenance">Maintenance</option>
-                <option value="consulting">Conseil</option>
-                <option value="other">Autre</option>
-              </select>
-            </div>
-            <div class="col-md-12">
-              <label for="yourMessage" class="form-label">Message</label>
-              <textarea class="form-control" id="yourMessage" rows="3" placeholder="Décrivez votre projet"></textarea>
-            </div>
-            <div class="col-md-8 mt-4">
-              <button type="submit" class="btn btn-lg btn-green btn-with-icon rounded-pill">Envoyer ma demande <i
-                  class="bi bi-arrow-right"></i></button>
-            </div>
-            <div class="col-md-12 mt-3">
-              <p class="text-muted small">Tel: 438-725-1915 | Email: edwingbeti@gmail.com</p>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

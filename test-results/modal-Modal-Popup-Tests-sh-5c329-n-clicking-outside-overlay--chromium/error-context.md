@@ -299,6 +299,5 @@ Call log:
   107 |     await expect(page.locator('#modal-devis')).toContainText('Disponible 7j/7 pour vos projets urgents');
   108 |     await expect(page.locator('#modal-devis')).toContainText('Réponse rapide garantie !');
   109 |   });
-  110 | });
-  111 |
+  110 | }); 
 ```

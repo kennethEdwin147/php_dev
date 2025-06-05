@@ -50,6 +50,11 @@ yarn-error.log*
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/playwright/.auth/
+/playwright/downloads/
+/playwright/videos/
+/playwright/screenshots/
+/playwright/trace/
 
 # Build artifacts
 /dist/

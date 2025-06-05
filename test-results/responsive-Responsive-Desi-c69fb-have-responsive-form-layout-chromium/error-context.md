@@ -19,7 +19,7 @@ Call log:
       - element is not visible
     - retrying click action
       - waiting 100ms
-    55 × waiting for element to be visible, enabled and stable
+    52 × waiting for element to be visible, enabled and stable
        - element is not visible
      - retrying click action
        - waiting 500ms
@@ -309,6 +309,5 @@ Call log:
   143 |       }
   144 |     }
   145 |   });
-  146 | });
-  147 |
+  146 | }); 
 ```

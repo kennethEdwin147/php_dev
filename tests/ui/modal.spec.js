@@ -107,4 +107,4 @@ test.describe('Modal Popup Tests', () => {
     await expect(page.locator('#modal-devis')).toContainText('Disponible 7j/7 pour vos projets urgents');
     await expect(page.locator('#modal-devis')).toContainText('Réponse rapide garantie !');
   });
-});
+}); 
