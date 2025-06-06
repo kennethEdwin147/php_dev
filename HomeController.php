@@ -3,7 +3,7 @@
 class HomeController
 {
     private $to_email = "edwingbeti@gmail.com";
-    
+
     /**
      * Affiche la page d'accueil
      */
@@ -22,7 +22,26 @@ class HomeController
 
         include 'HomeView.php';
     }
-    
+
+    /**
+     * Affiche la page Full-Stack
+     */
+    public function fullstack()
+    {
+        $success_message = '';
+        $error_message = '';
+        $form_data = [
+            'name' => '',
+            'company' => '',
+            'email' => '',
+            'phone' => '',
+            'project_type' => '',
+            'message' => ''
+        ];
+
+        include 'FullStackView.php';
+    }
+
     /**
      * Traite le formulaire de contact
      */
@@ -37,7 +56,7 @@ class HomeController
             'project_type' => $_POST['project_type'] ?? '',
             'message' => trim($_POST['message'] ?? '')
         ];
-        
+
         // Validation
         $errors = $this->validateForm($form_data);
 
@@ -66,35 +85,35 @@ class HomeController
 
         include 'HomeView.php';
     }
-    
+
     /**
      * Valide les données du formulaire
      */
     private function validateForm($form_data)
     {
         $errors = [];
-        
+
         if (empty($form_data['name'])) {
             $errors[] = "Le nom et prénom sont obligatoires.";
         }
-        
+
         if (empty($form_data['email'])) {
             $errors[] = "L'email est obligatoire.";
         } elseif (!filter_var($form_data['email'], FILTER_VALIDATE_EMAIL)) {
             $errors[] = "L'email n'est pas valide.";
         }
-        
+
         if (empty($form_data['message'])) {
             $errors[] = "Le message est obligatoire.";
         }
-        
+
         if ($form_data['project_type'] === '' || $form_data['project_type'] === 'Sélectionnez le type de projet') {
             $errors[] = "Veuillez sélectionner un type de projet.";
         }
-        
+
         return $errors;
     }
-    
+
     /**
      * Envoie l'email de contact
      */
@@ -116,11 +135,11 @@ class HomeController
             ---
             Email envoyé depuis le site web
                     ";
-        
+
         $headers = "From: " . $form_data['email'] . "\r\n";
         $headers .= "Reply-To: " . $form_data['email'] . "\r\n";
         $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-        
+
         return mail($this->to_email, $subject, $email_body, $headers);
     }
 }

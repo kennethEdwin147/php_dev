@@ -7,6 +7,7 @@ $homeController = new HomeController();
 
 // Routes
 Flight::route('/', [$homeController, 'index']);
+Flight::route('/fullstack', [$homeController, 'fullstack']);
 Flight::route('POST /contact', [$homeController, 'contact']);
 
 // Démarrer l'application

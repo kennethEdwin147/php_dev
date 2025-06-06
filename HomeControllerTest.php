@@ -43,7 +43,7 @@ class HomeControllerTest extends TestCase
             $this->fail('Failed to access home page: ' . $e->getMessage());
         }
     }
-    
+
     /**
      * Test submitting the contact form with valid data
      */
@@ -92,7 +92,7 @@ class HomeControllerTest extends TestCase
             $this->fail('Failed to submit contact form: ' . $e->getMessage());
         }
     }
-    
+
     /**
      * Test submitting the contact form with invalid data
      */
@@ -129,6 +129,35 @@ class HomeControllerTest extends TestCase
 
         } catch (RequestException $e) {
             $this->fail('Failed to test form validation: ' . $e->getMessage());
+        }
+    }
+
+    /**
+     * Test accessing the Full-Stack page
+     */
+    public function testFullStackPageAccess()
+    {
+        try {
+            // Make GET request to Full-Stack page
+            $response = $this->client->get('/fullstack');
+
+            // Get response body and status code
+            $body = $response->getBody()->getContents();
+            $statusCode = $response->getStatusCode();
+
+            // Assert that the page is accessible (HTTP 200)
+            $this->assertEquals(200, $statusCode);
+
+            // Assert that the response contains expected content
+            $this->assertStringContainsString('Développeur Full-Stack', $body);
+            $this->assertStringContainsString('Votre Partenaire en Développement Logiciel', $body);
+            $this->assertStringContainsString('Expertise Technique', $body);
+            $this->assertStringContainsString('Mon Engagement pour la Qualité', $body);
+            $this->assertStringContainsString('Mon Approche', $body);
+            $this->assertStringContainsString('Services que Je Propose', $body);
+
+        } catch (RequestException $e) {
+            $this->fail('Failed to access Full-Stack page: ' . $e->getMessage());
         }
     }
 }
