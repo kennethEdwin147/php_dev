@@ -32,4 +32,4 @@ Pour discuter de votre projet ou pour toute question, n'hésitez pas à me conta
 
 ---
 
-*© 2023 Kenneth Gbeti - Tous droits réservés*
+*© 2025 Kenneth Gbeti - Tous droits réservés*
