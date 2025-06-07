@@ -103,9 +103,6 @@
             <a class="nav-link" href="#qualite">Qualité</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#approche">Mon Approche</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#services">Services</a>
           </li>
           <li class="nav-item">

@@ -103,9 +103,6 @@
             <a class="nav-link" href="#clients">Qui J'aide</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#pourquoi">Pourquoi Me Choisir</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#technologies">Technologies</a>
           </li>
           <li class="nav-item">
